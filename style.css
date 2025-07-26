@@ -1,0 +1,145 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefae0; /* Cream */
+  color: #2d4739; /* Dark Green */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  background-color: #fffef3;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2f5233;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #3a5a40;
+  text-align: left;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.3rem;
+  border: 2px solid #ccd5ae;
+  border-radius: 10px;
+  background-color: #fefae0;
+  color: #2f3e46;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #588157;
+  outline: none;
+}
+
+.allergy-checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.allergy-checkboxes label {
+  margin: 0.25rem 0;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #588157;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3a5a40;
+  transform: scale(1.05);
+}
+
+#results {
+  margin-top: 2rem;
+}
+
+.result-box {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  animation: slideIn 0.5s ease;
+}
+
+.result-box h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.result-box p {
+  margin: 0.3rem 0;
+}
+
+.green {
+  background-color: #81c784; /* Light green */
+}
+
+.yellow {
+  background-color: #fdd835; /* Bright yellow */
+  color: #3e3e3e;
+}
+
+.red {
+  background-color: #e57373; /* Soft red */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  button {
+    width: 100%;
+  }
+}
